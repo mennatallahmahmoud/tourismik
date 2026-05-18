@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tourism</title>
+        <link href="./node_modules/swiper/swiper-bundle.css" rel="stylesheet"/>
+        <link href="aos.css" rel="stylesheet"/>
+        <link href="./output.css" rel="stylesheet"/>
+    </head>
+    <body>
+
+        <header class="fixed top-0 left-0 w-full z-50">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1600px]">
+
+                <div class="flex items-center justify-between 
+                    bg-white/80 backdrop-blur-xl 
+                    shadow-lg px-6 lg:px-10 py-4 
+                    rounded-b-[30px] border border-white">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10 rounded-full 
+                            bg-gradient-to-br from-[#4cc9f0] via-[#1f3b57] to-[#ffb703]
+                            flex items-center justify-center text-white font-bold shadow-md">
+                        ✈
+                        </div>
+
+                        <span class="text-[#1f3b57] font-bold text-xl tracking-wide">
+                        Tourismik
+                        </span>
+
+                    </div>
+
+                    <nav class="hidden lg:flex items-center gap-8 text-[#1f3b57] font-medium">
+
+                        <a href="#" class="hover:text-[#ffb703] hover:-translate-y-0.5 transition">Home</a>
+
+                        <div class="relative group">
+
+                            <button class="flex items-center gap-2 hover:text-[#ffb703] hover:-translate-y-0.5 transition">
+
+                                Destinations
+
+                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180 text-[#879ca6]"
+                                    fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7"/>
+                                </svg>
+
+                            </button>
+
+                            <div class="absolute top-10 left-0 w-48 bg-white shadow-xl rounded-xl p-3
+                                        opacity-0 invisible translate-y-2
+                                        group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                                        transition-all duration-200 border">
+
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">Europe</a>
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">Asia</a>
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">Africa</a>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="hover:text-[#ffb703] hover:-translate-y-0.5 transition">Tours</a>
+
+                        <div class="relative group">
+
+                            <button class="flex items-center gap-2 hover:text-[#ffb703] hover:-translate-y-0.5 transition">
+
+                                Pages
+
+                                <svg class="w-4 h-4 transition-transform group-hover:rotate-180 text-[#879ca6]"
+                                    fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7"/>
+                                </svg>
+
+                            </button>
+
+                            <div class="absolute top-10 left-0 w-48 bg-white shadow-xl rounded-xl p-3
+                                opacity-0 invisible translate-y-2
+                                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+                                transition-all duration-200 border">
+
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">About</a>
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">Blog</a>
+                                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-[#f8fbff] hover:text-[#ffb703]">FAQ</a>
+
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="hover:text-[#ffb703] hover:-translate-y-0.5 transition">Contact</a>
+
+                    </nav>
+
+                    <div class="hidden lg:block hover:-translate-y-0.5 transition">
+                        <a href="#"
+                        class="bg-[#ffb703] text-white px-6 py-3 rounded-2xl shadow-md">
+                        Book Now
+                        </a>
+                    </div>
+
+                    <button id="menuBtn" class="lg:hidden text-[#1f3b57] text-3xl">
+                    ☰
+                    </button>
+                </div>
+
+            </div>
+
+        <!-- MOBILE MENU -->
+
+            <div id="menuOverlay"
+                class="hidden fixed inset-0 bg-black/30 z-40"></div>
+
+            <div id="mobileMenu"
+                class="fixed top-0 right-0 h-full w-[320px] 
+                bg-white/95 backdrop-blur-xl 
+                shadow-2xl z-50 
+                translate-x-full transition-transform duration-300">
+
+                <div class="flex flex-col p-6 gap-5 text-[#1f3b57]">
+
+                    <button id="closeMenu" class="self-end text-2xl text-[#1f3b57]">
+                    ✕
+                    </button>
+
+                    <a href="#">Home</a>
+
+                    <details class="group">
+                        <summary class="cursor-pointer flex justify-between items-center list-none">
+                            Destinations
+                            <svg class="w-4 h-4 text-[#879ca6] transition-transform group-open:rotate-180"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+
+                        <div class="pl-4 mt-2 flex flex-col gap-2 text-sm text-[#879ca6]">
+                            <a href="#">Europe</a>
+                            <a href="#">Asia</a>
+                            <a href="#">Africa</a>
+                        </div>
+                    </details>
+
+                    <a href="#">Tours</a>
+
+                    <details class="group">
+                        <summary class="cursor-pointer flex justify-between items-center list-none">
+                            Pages
+                            <svg class="w-4 h-4 text-[#879ca6] transition-transform group-open:rotate-180"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </summary>
+
+                        <div class="pl-4 mt-2 flex flex-col gap-2 text-sm text-[#879ca6]">
+                            <a href="#">About</a>
+                            <a href="#">Blog</a>
+                            <a href="#">FAQ</a>
+                        </div>
+                    </details>
+
+                    <a href="#">Contact</a>
+
+                    <a href="#"
+                    class="bg-[#1f3b57] text-white text-center py-3 rounded-xl mt-4">
+                    Book Now
+                    </a>
+
+                </div>
+            </div>
+
+        </header>
+
+        <section class="hero-section min-h-screen flex items-center" data-aos="flip-left">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1600px]">
+
+                <div class="hero-txt grid grid-cols-1 lg:grid-cols-2 items-center gap-10 bg-white rounded-[40px] shadow-xl overflow-hidden">
+
+                    <div
+                        class="bg-no-repeat bg-right bg-contain p-8 lg:p-12 ">
+
+                        <div class="space-y-6 max-w-xl">
+
+                            <span class="text-[#ffb703] font-bold tracking-[0.3em] uppercase">
+                                It’s Time
+                            </span>
+
+                            <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight text-[#1f3b57]">
+                                Explore The World <br />
+                                <span class="text-[#4cc9f0]">With Joy & Adventure</span>
+                            </h1>
+
+                            <p class="text-gray-500 text-lg">
+                                Discover amazing destinations, colorful cultures, and unforgettable experiences made just for your next journey.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4 pt-4">
+
+                                <a href="#"
+                                class="animated-btn bg-[#ffb703] text-white px-7 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
+                                Start Adventure
+                                </a>
+
+                                <a href="#"
+                                    class="animated-button">
+                                
+                                    <svg viewBox="0 0 24 24" class="arr-2">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+
+                                    <span class="text">View Packages</span>
+
+                                    <span class="circle"></span>
+
+                                    <svg viewBox="0 0 24 24" class="arr-1">
+                                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="relative">
+
+                        <div class="swiper heroSwiper overflow-hidden shadow-2xl">
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <img src="./imgs/hero-slider (1).webp"
+                                        class="w-full h-[500px] lg:h-[600px] object-cover" />
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./imgs/hero-slider (2).webp"
+                                        class="w-full h-[500px] lg:h-[600px] object-cover" />
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <img src="./imgs/hero-slider (3).webp"
+                                        class="w-full h-[500px] lg:h-[600px] object-cover" />
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="search-section pb-20 relative z-20" data-aos="fade-up">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1200px]">
+
+                <div
+                class="search-trips-cont relative overflow-hidden rounded-[40px] min-h-[350px]">
+
+                    <div class="absolute inset-0 bg-[#1f3b57]/75"></div>
+
+                    <div
+                        class="relative z-10 p-4 lg:p-12 h-full flex flex-col justify-center">
+
+                        <span
+                        class="text-[#ffb703] uppercase tracking-[0.3em] font-bold">
+                            Plan Your Journey
+                        </span>
+
+                        <h2
+                        class="text-white text-lg lg:text-4xl font-extrabold mt-2">
+                            Find Your Perfect Destination
+                        </h2>
+
+                        <p
+                        class="text-white/70 mt-2 max-w-2xl text-lg">
+                            Choose your dream place and travel dates to start your next unforgettable adventure.
+                        </p>
+
+                        <div class="flex gap-4 mt-4 justify-center">
+
+                            <button
+                            class="tab-btn active-tab flex items-center gap-2"
+                            data-tab="destination">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.553-.832L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m-6 3l6-3" />
+
+                                </svg>
+
+                                Destination
+
+                            </button>
+
+                            <button
+                            class="tab-btn flex items-center gap-2"
+                            data-tab="date">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+
+                                </svg>
+
+                                Date
+
+                            </button>
+
+                        </div>
+
+
+                        <div
+                        id="destination"
+                        class="tab-content active-content grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+
+                            <div class="relative">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-[#1f3b57]/60">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.6 9h16.8M3.6 15h16.8M12 3a15.3 15.3 0 010 18M12 3a15.3 15.3 0 000 18" />
+
+                                </svg>
+
+                                <select class="travel-input pl-14">
+
+                                    <option selected disabled>
+                                        Select Country
+                                    </option>
+
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="France">France</option>
+                                    <option value="Turkey">Turkey</option>
+
+                                </select>
+
+                            </div>
+
+                            <div class="relative">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-[#1f3b57]/60">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01" />
+
+                                </svg>
+
+                                <select class="travel-input pl-14">
+
+                                    <option selected disabled>
+                                        Select City
+                                    </option>
+
+                                    <option value="Cairo">Cairo</option>
+                                    <option value="Rome">Rome</option>
+                                    <option value="Paris">Paris</option>
+                                    <option value="Istanbul">Istanbul</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                        id="date"
+                        class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+
+                            <div class="relative">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-[#1f3b57]/60">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+
+                                </svg>
+
+                                <input
+                                type="date"
+                                id="from-date"
+                                class="travel-input pl-14" />
+
+                            </div>
+
+                            <div class="relative">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-[#1f3b57]/60">
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+
+                                    <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M9 15l2 2 4-4" />
+
+                                </svg>
+
+                                <input
+                                type="date"
+                                id="to-date"
+                                class="travel-input pl-20" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="mt-8 flex justify-center">
+
+                            <a href="#"
+                            class="animated-button search-trips-btn">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="arr-2">
+
+                                    <circle cx="11" cy="11" r="7"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+
+                                </svg>
+
+                                <span class="text">Search Trips</span>
+
+                                <span class="circle"></span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="arr-1">
+
+                                    <circle cx="11" cy="11" r="7"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="dest-section py-20 relative overflow-hidden bg-[#1f3b57]" data-aos="zoom-out-up">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1600px] ">
+                <div class="top-destinations-overlay absolute inset-0 "></div>
+
+                <div class="text-center mb-12 relative z-10">
+
+                    <span class="text-[#ffb703] font-bold tracking-[0.3em] uppercase">
+                        Explore
+                    </span>
+
+                    <h2 class="text-3xl lg:text-5xl font-extrabold text-white mt-3">
+                        Top Destinations
+                    </h2>
+
+                    <p class="text-white/70 mt-4 max-w-2xl mx-auto">
+                        Discover the most beautiful places around the world and plan your next unforgettable journey.
+                    </p>
+
+                </div>
+
+                <div class="swiper destSwiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide dest-card">
+                            <img src="./imgs/top-destinations (1).webp">
+
+                            <div class="overlay">
+                                <h3 class="place-name">Paris</h3>
+                                <p class="place-desc">The city of lights and romance</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide dest-card">
+                            <img src="./imgs/top-destinations (2).webp">
+
+                            <div class="overlay">
+                                <h3 class="place-name">Rome</h3>
+                                <p class="place-desc">The eternal city of history</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide dest-card">
+                            <img src="./imgs/top-destinations (3).webp">
+
+                            <div class="overlay">
+                                <h3 class="place-name">Cairo</h3>
+                                <p class="place-desc">Where history meets modern life</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide dest-card">
+                            <img src="./imgs/top-destinations (4).webp">
+
+                            <div class="overlay">
+                                <h3 class="place-name">Istanbul</h3>
+                                <p class="place-desc">The bridge between continents</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide dest-card">
+                            <img src="./imgs/top-destinations (5).webp">
+
+                            <div class="overlay">
+                                <h3 class="place-name">Dubai</h3>
+                                <p class="place-desc">Luxury meets innovation</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="dest-pagination"></div>
+
+                </div>
+
+                <div class="mt-8 flex justify-center">
+
+                    <a href="#"
+                    class="animated-button search-trips-btn">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="arr-2">
+
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                        <span class="text">Discover more</span>
+
+                        <span class="circle"></span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="arr-1">
+
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="video-stats-section py-20 relative">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1600px]">
+  
+                <div class="video-area">
+
+                    <video autoplay muted loop playsinline preload="auto" class="w-full">
+                        <source src="imgs/stats-vid.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="video-overlay"></div>
+
+
+                </div>
+
+                <div class="stats-wrapper" data-aos="fade-down">
+
+                    <div class="stats-grid w-[80%] mx-auto">
+
+                        <div class="stat-box">
+                            <div class="icon relative z-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M2 12h20"/>
+                                    <path d="M12 2c3 3 3 17 0 20"/>
+                                    <path d="M12 2c-3 3-3 17 0 20"/>
+                                </svg>
+                            </div>
+
+                            <h2 class="count relative z-5" data-target="1200">+1200</h2>
+                            <p class="relative z-5">Destinations</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon relative z-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9L2 14v2l8-2.5V19l-2 1.5V22l3-1 3 1v-1.5L12 19v-5.5L21 16z"/>
+                                </svg>
+                            </div>
+
+                            <h2 class="count relative z-5" data-target="2500">+5200</h2>
+                            <p class="relative z-5">Flights Booked</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon relative z-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="7" r="4"/>
+                                    <path d="M17 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M7 21v-2a4 4 0 0 1 3-3.87"/>
+                                </svg>
+                            </div>
+
+                            <h2 class="count relative z-5" data-target="800">+800</h2>
+                            <p class="relative z-5">Happy Travelers</p>
+                        </div>
+
+                        <div class="stat-box">
+                            <div class="icon relative z-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="8" r="6"/>
+                                    <path d="M8 14l-2 7 6-3 6 3-2-7"/>
+                                </svg>
+                            </div>
+
+                            <h2 class="count relative z-5" data-target="15">+15</h2>
+                            <p class="relative z-5">Years Experience</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="gallery py-20 bg-[#1f3b57] relative" data-aos="zoom-out-up">
+
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1600px]">
+                <div class="text-center mb-12 relative z-10">
+
+                    <span class="font-bold tracking-[0.3em] uppercase text-[#ffb703] ">
+                        Explore
+                    </span>
+
+                    <h2 class="text-3xl lg:text-5xl font-extrabold text-white mt-3">
+                        Photo Gallery
+                    </h2>
+
+                    <p class="text-white/70 mt-4 max-w-2xl mx-auto">
+                        Explore destinations with a smooth infinite experience.
+                    </p>
+
+                </div>
+
+                <div class="slider-wrap">
+
+                    <div class="slider" id="slider">
+
+                        <div class="slide"><img src="imgs/top-destinations (1).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (2).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (3).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (4).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (5).webp"></div>
+
+                        <!-- clones -->
+                        <div class="slide"><img src="imgs/top-destinations (1).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (2).webp"></div>
+                        <div class="slide"><img src="imgs/top-destinations (3).webp"></div>
+
+                    </div>
+
+                    <div class="bar" id="bar">
+                        <div class="thumb" id="thumb"></div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 flex justify-center">
+
+                    <a href="#"
+                    class="animated-button search-trips-btn">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="arr-2">
+
+                            <circle cx="12" cy="12" r="9"></circle>
+
+                            <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                        <span class="text">Discover more</span>
+
+                        <span class="circle"></span>
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="arr-1">
+
+                            <circle cx="12" cy="12" r="9"></circle>
+
+                            <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <img id="modalImg" src="" alt="">
+            </div>
+        </div>
+
+        <section class="testimonial-section py-20 relative">
+            <div class="testimonial-overlay absolute w-full h-full top-0 left-0"></div>
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1200px]" data-aos="flip-up">
+
+                <div class="text-center mb-12 relative z-10">
+
+                    <span class="font-bold tracking-[0.3em] uppercase text-[#ffb703]">
+                        Explore
+                    </span>
+
+                    <h2 class="text-3xl lg:text-5xl font-extrabold text-[#1f3b57] mt-3">
+                        Testimonials
+                    </h2>
+
+                    <p class="text-[#1f3b57]/70 mt-4 max-w-2xl mx-auto">
+                        Authentic reviews from people who trusted us with their unforgettable journeys.
+                    </p>
+
+                </div>
+
+                <div class="testimonial-wrapper " >
+
+                    <div class="testimonial-image ">
+
+                        <img id="mainImage" src="imgs/testimonials (2).jpg" alt="">
+
+                    </div>
+
+                    <div class="testimonial-users">
+
+                        <div class="user active"
+                            data-img="imgs/testimonials (2).jpg"
+                            data-name="Sarah Johnson"
+                            data-role="Travel Blogger"
+                            data-text="Amazing experience! Everything was perfectly organized and the destinations were absolutely stunning.">
+
+                            <img src="imgs/testimonials (2).jpg" alt="">
+
+                        </div>
+
+                        <div class="user"
+                            data-img="imgs/testimonials (3).jpg"
+                            data-name="Michael Lee"
+                            data-role="Photographer"
+                            data-text="One of the smoothest travel experiences I’ve ever had. Great service and unforgettable places.">
+
+                            <img src="imgs/testimonials (3).jpg" alt="">
+
+                        </div>
+
+                        <div class="user"
+                            data-img="imgs//testimonials (1).jpg"
+                            data-name="Emma Watson"
+                            data-role="Adventure Traveler"
+                            data-text="Incredible support and beautiful destinations. The whole journey felt premium and stress-free.">
+
+                            <img src="imgs//testimonials (1).jpg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="testimonial-info">
+
+                        <div class="testimonial-content">
+
+                            <span class="sub-title">
+                                Testimonials
+                            </span>
+
+                            <h2 id="personName">
+                                Sarah Johnson
+                            </h2>
+
+                            <span class="role" id="personRole">
+                                Travel Blogger
+                            </span>
+
+                            <p id="personText">
+                                Amazing experience! Everything was perfectly organized and the destinations were absolutely stunning.
+                            </p>
+
+                        </div>
+
+                        <div class="testimonial-nav">
+
+                            <button class="nav-btn prev-btn">
+
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18L9 12L15 6"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                                </svg>
+
+                            </button>
+
+                            <button class="nav-btn next-btn">
+
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 18L15 12L9 6"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"/>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-8 flex justify-center">
+
+                    <a href="#"
+                    class="animated-button search-trips-btn">
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="arr-2">
+
+                            <!-- COMPASS -->
+                            <circle cx="12" cy="12" r="9"></circle>
+
+                            <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                        <span class="text">Discover more</span>
+
+                        <span class="circle"></span>
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="arr-1">
+
+                            <circle cx="12" cy="12" r="9"></circle>
+
+                            <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="news-section py-20 bg-[#1f3b5712]" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
+            <div class="container mx-auto px-4 lg:px-10 max-w-[1200px]">
+
+                <div class="text-center mb-12 relative z-10">
+
+                    <span class="font-bold tracking-[0.3em] uppercase text-[#ffb703]">
+                        Explore
+                    </span>
+
+                    <h2 class="text-3xl lg:text-5xl font-extrabold text-[#1f3b57] mt-3">
+                        News
+                    </h2>
+
+                    <p class="text-[#1f3b57]/70 mt-4 max-w-2xl mx-auto">
+                        Discover inspiring travel updates, hidden gems, and stories that bring every destination to life.
+                    </p>
+
+                </div>
+
+                <div class="news-wrapper">
+
+                    <div class="news-card overflow-hidden">
+                        <div class="news-img relative overflow-hidden">
+                            <img src="imgs/top-destinations (3).webp" alt="">
+                        </div>
+                        <div class="news-content">
+                            <span>Travel</span>
+                            <h3>Discover the beauty of Egypt</h3>
+                            <p>Explore amazing destinations and hidden gems...</p>
+                        </div>
+                        <div class="mt-8 flex justify-start">
+
+                            <a href="#"
+                            class="animated-button search-trips-btn">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-2">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                                <span class="text">See more</span>
+
+                                <span class="circle"></span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-1">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="news-card overflow-hidden">
+                        <div class="news-img relative overflow-hidden">
+                            <img src="imgs/top-destinations (2).webp" alt="">
+                        </div>
+                        <div class="news-content">
+                            <span>Culture</span>
+                            <h3>Old Cairo experience guide</h3>
+                            <p>Walk through history and enjoy authentic vibes...</p>
+                        </div>
+                        <div class="mt-8 flex justify-start">
+
+                            <a href="#"
+                            class="animated-button search-trips-btn">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-2">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                                <span class="text">See more</span>
+
+                                <span class="circle"></span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-1">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="news-card overflow-hidden">
+                        <div class="news-img relative overflow-hidden">
+                            <img src="imgs/top-destinations (1).webp" alt="">
+                        </div>
+                        <div class="news-content">
+                            <span>Adventure</span>
+                            <h3>Desert safari activities</h3>
+                            <p>Enjoy thrilling adventures in the golden desert...</p>
+                        </div>
+                        <div class="mt-8 flex justify-start">
+
+                            <a href="#"
+                            class="animated-button search-trips-btn">
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-2">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                                <span class="text">See more</span>
+
+                                <span class="circle"></span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="arr-1">
+
+                                    <circle cx="12" cy="12" r="9"></circle>
+
+                                    <polygon points="14.5 9.5 9.5 14.5 11 11 14.5 9.5"></polygon>
+
+                                </svg>
+
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="tourismik-footer pt-20 relative">
+
+            <div class="footer-overlay absolute w-full h-full top-0 left-0"></div>
+
+
+            <div class="container footer-wrapper">
+
+                <div class="footer-col footer-about">
+
+                    <a href="#" class="footer-logo">
+                        <div class="flex items-center gap-3">
+
+                            <div class="w-10 h-10 rounded-full 
+                                        bg-gradient-to-br from-[#4cc9f0] via-[#1f3b57] to-[#ffb703]
+                                        flex items-center justify-center text-white font-bold shadow-md">
+                            ✈
+                            </div>
+
+                            <span class="text-white font-bold text-2xl tracking-wide">
+                            Tourismik
+                            </span>
+
+                        </div>
+                    </a>
+
+                    <p>
+                        Discover unforgettable journeys, hidden gems, and premium travel experiences around the world.
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+
+                                <path d="M22 12.07C22 6.477 17.523 2 12 2S2 6.477 2 12.07c0 5.017 3.657 9.178 8.438 9.93v-7.03H7.898v-2.9h2.54V9.845c0-2.52 1.492-3.914 3.777-3.914 1.094 0 2.238.198 2.238.198v2.475h-1.26c-1.243 0-1.63.777-1.63 1.572v1.89h2.773l-.443 2.9h-2.33V22c4.78-.752 8.437-4.913 8.437-9.93z"/>
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+
+                                <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5C18.322 4 20 5.678 20 7.75v8.5c0 2.072-1.678 3.75-3.75 3.75h-8.5C5.678 20 4 18.322 4 16.25v-8.5C4 5.678 5.678 4 7.75 4zm8.75 1a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+
+                                <path d="M18.244 2H21l-6.56 7.497L22 22h-6.828l-5.348-6.995L3.7 22H1l7.02-8.02L2 2h7l4.84 6.35L18.244 2zm-1.197 18h1.885L7.88 4H5.857l11.19 16z"/>
+
+                            </svg>
+
+                        </a>
+
+                        <a href="#">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+
+                                <path d="M23.498 6.186a2.997 2.997 0 00-2.11-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.388.566a2.997 2.997 0 00-2.11 2.12C0 8.08 0 12 0 12s0 3.92.502 5.814a2.997 2.997 0 002.11 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.388-.566a2.997 2.997 0 002.11-2.12C24 15.92 24 12 24 12s0-3.92-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/>
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-col">
+                    <h3>Company</h3>
+
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">News & Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Support</h3>
+
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+
+                    <ul class="contact-info">
+                        <li>Cairo, Egypt</li>
+                        <li>travelly@gmail.com</li>
+                        <li>+20 100 123 4567</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="copyright-year"></span> Tourismik. All Rights Reserved.</p>
+            </div>
+
+        </footer>
+        
+
+        <div class="global-plane">
+            <img src="imgs/plane.webp" alt="Plane Icon"/>
+        </div>
+
+        <div class="cursor-follower"></div>
+
+        <button class="scroll-top" id="scrollTopBtn">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path d="M12 18V6"/>
+                <path d="M7 11l5-5 5 5"/>
+            </svg>
+        </button>
+
+        <script src="js/swiper-bundle.js"></script>
+        <script src="js/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: false,
+                offset: 120
+            });
+        </script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
