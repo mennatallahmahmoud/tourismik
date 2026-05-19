@@ -1215,7 +1215,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("/imgs/body-bg.png");
+  background-image: url("imgs/body-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1233,7 +1233,7 @@ video{
 /* Hero Section */
 
 .hero-section .hero-txt {
-  background-image: url('/imgs/hero-bg.webp');
+  background-image: url('imgs/hero-bg.webp');
   background-size: contain;
 }
 
@@ -1248,7 +1248,7 @@ video{
 }
 
 .search-trips-cont {
-  background-image: url("/imgs/search-trips-bg.webp");
+  background-image: url("imgs/search-trips-bg.webp");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1543,7 +1543,7 @@ video{
 }
 
 .top-destinations-overlay{
-  background-image: url("/imgs/top-destinations-overlay.webp");
+  background-image: url("imgs/top-destinations-overlay.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.08;
@@ -1663,7 +1663,7 @@ video{
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("/imgs/search-trips-bg.webp");
+  background-image: url("imgs/search-trips-bg.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.2;
@@ -1807,7 +1807,7 @@ video{
 /* Testimonials Section */
 
 .testimonial-section .testimonial-overlay{
-  background-image: url("/imgs/testimonial-bg.png");
+  background-image: url("imgs/testimonial-bg.png");
   background-size: cover;
   background-position: center;
   opacity: 0.8;
@@ -2091,7 +2091,7 @@ video{
 
 .footer-overlay {
   pointer-events: none;
-  background-image: url("/imgs/footer.webp");
+  background-image: url("imgs/footer.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.08;
